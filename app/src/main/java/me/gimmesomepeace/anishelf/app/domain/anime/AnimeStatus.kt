@@ -4,4 +4,5 @@ enum class AnimeStatus {
     FINISHED_AIRING,
     CURRENTLY_AIRING,
     NOT_YET_AIRING,
+    UNKNOWN,
 }

@@ -10,4 +10,5 @@ enum class AnimeType {
     CM,
     PV,
     TV_SPECIAL,
+    UNKNOWN,
 }
