@@ -1,6 +1,6 @@
-package me.gimmesomepeace.anishelf.app.domain.anime
+package me.gimmesomepeace.anishelf.app.domain.anime.model
 
-import me.gimmesomepeace.anishelf.app.domain.genre.Genre
+import me.gimmesomepeace.anishelf.app.domain.genre.model.Genre
 
 class Anime(
     val id: AnimeId,
@@ -13,8 +13,11 @@ class Anime(
     val type: AnimeType,
 
     val synopsis: String,
+
     val score: Float?,
     val rank: Int?,
+    val rating: AnimeRating,
+
     val episodes: Int?,
 
     val genres: List<Genre>,

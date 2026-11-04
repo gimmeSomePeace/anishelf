@@ -12,6 +12,7 @@ data class AnimeDetailsDto(
 
     val score: Float? = null,
     val rank: Int? = null,
+    val rating: String? = null,
 
     val synopsis: String? = null,
     val genres: List<AnimeListGenreDto>,

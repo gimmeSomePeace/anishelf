@@ -1,4 +1,4 @@
-package me.gimmesomepeace.anishelf.app.data
+package me.gimmesomepeace.anishelf.app.domain.common
 
 data class PageRequest(
     val pageNumber: Int,

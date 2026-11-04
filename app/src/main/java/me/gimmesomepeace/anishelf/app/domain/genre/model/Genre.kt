@@ -1,4 +1,4 @@
-package me.gimmesomepeace.anishelf.app.domain.genre
+package me.gimmesomepeace.anishelf.app.domain.genre.model
 
 import java.net.URI
 

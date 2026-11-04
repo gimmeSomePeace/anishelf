@@ -1,4 +1,4 @@
-package me.gimmesomepeace.anishelf.app.domain.anime
+package me.gimmesomepeace.anishelf.app.domain.anime.model
 
 import me.gimmesomepeace.anishelf.app.domain.common.ImageUri
 
