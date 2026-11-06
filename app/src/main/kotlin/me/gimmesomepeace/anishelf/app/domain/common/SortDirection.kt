@@ -1,6 +1,6 @@
 package me.gimmesomepeace.anishelf.app.domain.common
 
-enum class Sort {
+enum class SortDirection {
     ASC,
     DESC,
 }

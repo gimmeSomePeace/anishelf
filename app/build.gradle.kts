@@ -63,12 +63,12 @@ dependencies {
 
 apollo {
     service("anilist") {
-        packageName.set("me.gimmesomepeace.anishelf.app.data.remote.anilist")
+        packageName.set("me.gimmesomepeace.anishelf.app.data")
 
         introspection {
             endpointUrl.set("https://graphql.anilist.co")
 
-            schemaFile.set(file("src/main/kotlin/me/gimmesomepeace/anishelf/app/data/graphql/schema.graphqls"))
+            schemaFile.set(file("src/main/graphql/schema.graphqls"))
         }
     }
 }

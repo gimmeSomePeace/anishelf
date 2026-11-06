@@ -1,6 +1,6 @@
 package me.gimmesomepeace.anishelf.app.domain.anime.model
 
-enum class AnimeSort {
+enum class AnimeSortField {
     ID,
     TITLE,
     START_DATE,

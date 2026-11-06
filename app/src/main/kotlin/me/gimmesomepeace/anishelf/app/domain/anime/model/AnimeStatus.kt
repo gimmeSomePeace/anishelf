@@ -6,4 +6,5 @@ enum class AnimeStatus {
     NOT_YET_RELEASED,
     CANCELLED,
     HIATUS,
+    UNKNOWN,
 }

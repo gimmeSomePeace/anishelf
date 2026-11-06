@@ -16,11 +16,13 @@ query AnimeDetails($id: Int!) {
         duration
         genres
         status
+        format
 
         episodes
         popularity
 
         trailer {
+            id
             site
             thumbnail
         }
