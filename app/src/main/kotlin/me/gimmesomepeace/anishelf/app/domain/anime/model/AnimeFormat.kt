@@ -1,14 +1,14 @@
 package me.gimmesomepeace.anishelf.app.domain.anime.model
 
-enum class AnimeType {
+enum class AnimeFormat {
     TV,
-    OVA,
+    TV_SHORT,
     MOVIE,
     SPECIAL,
+    OVA,
     ONA,
     MUSIC,
-    CM,
-    PV,
-    TV_SPECIAL,
-    UNKNOWN,
+    MANGA,
+    NOVEL,
+    ONE_SHOT,
 }

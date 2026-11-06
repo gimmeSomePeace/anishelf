@@ -1,23 +1,18 @@
 package me.gimmesomepeace.anishelf.app.domain.anime.repository
 
-import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeRating
-import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeStatus
-import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeType
-import me.gimmesomepeace.anishelf.app.domain.common.OrderBy
 import me.gimmesomepeace.anishelf.app.domain.common.Sort
-import me.gimmesomepeace.anishelf.app.domain.genre.model.GenreId
 import java.time.LocalDate
 
 data class AnimeFilters(
     val query: String? = null,
-    val type: AnimeType? = null,
+//    val type: AnimeType? = null,
     val minScore: Double? = null,
     val maxScore: Double? = null,
-    val status: AnimeStatus? = null,
+//    val status: AnimeStatus? = null,
 
-    val rating: AnimeRating? = null,
+//    val rating: AnimeRating? = null,
     val genresIds: Set<GenreId> = emptySet(),
-    val orderBy: OrderBy? = null,
+//    val orderBy: OrderBy? = null,
     val sort: Sort? = null,
 
     val startDate: LocalDate? = null,

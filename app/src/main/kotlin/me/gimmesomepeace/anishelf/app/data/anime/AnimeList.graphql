@@ -1,0 +1,61 @@
+query AnimeList(
+    $page: Int = 1,
+    $perPage: Int = 20,
+
+    $startDateGreater: FuzzyDateInt,
+    $startDateLesser: FuzzyDateInt,
+    $endDateGreater: FuzzyDateInt,
+    $endDateLesser: FuzzyDateInt,
+
+    $statusIn: [MediaStatus],
+    $formatIn: [MediaFormat],
+    $genreIn: [String],
+
+    $minScore: Int,
+    $maxScore: Int,
+
+    $search: String,
+
+    $sort: [MediaSort],
+) {
+    Page(page: $page, perPage: $perPage) {
+        pageInfo {
+            currentPage
+            perPage
+            hasNextPage
+        }
+
+        media(
+            type: ANIME,
+
+            startDate_greater: $startDateGreater,
+            startDate_lesser: $startDateLesser
+            endDate_greater: $endDateGreater,
+            endDate_lesser: $endDateLesser,
+
+            status_in: $statusIn,
+            format_in: $formatIn,
+            genre_in: $genreIn,
+
+            weightedScore_greater: $minScore,
+            weightedScore_lesser: $maxScore,
+
+            search: $search,
+            sort: $sort,
+        ) {
+            id
+            title {
+                english
+                romaji
+            }
+            coverImage {
+                medium
+                large
+            }
+            genres
+            format
+            status
+            weightedScore
+        }
+    }
+}
