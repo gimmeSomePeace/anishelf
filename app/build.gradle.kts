@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.apollo)
 }
 
 android {
@@ -49,6 +50,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
 
     implementation(libs.timber)
+    implementation(libs.apollo.runtime)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -57,4 +59,16 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+}
+
+apollo {
+    service("anilist") {
+        packageName.set("me.gimmesomepeace.anishelf.app.data.remote.anilist")
+
+        introspection {
+            endpointUrl.set("https://graphql.anilist.co")
+
+            schemaFile.set(file("src/main/kotlin/me/gimmesomepeace/anishelf/app/data/graphql/schema.graphqls"))
+        }
+    }
 }
