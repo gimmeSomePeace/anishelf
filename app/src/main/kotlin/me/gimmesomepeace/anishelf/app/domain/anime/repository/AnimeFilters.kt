@@ -1,19 +1,14 @@
 package me.gimmesomepeace.anishelf.app.domain.anime.repository
 
 import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeFormat
-import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeSortField
 import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeStatus
 import me.gimmesomepeace.anishelf.app.domain.anime.model.Genre
-import me.gimmesomepeace.anishelf.app.domain.common.SortDirection
 import java.time.LocalDate
 
 data class AnimeFilters(
     val query: String? = null,
     val minScore: Int? = null,
     val maxScore: Int? = null,
-
-    val sortBy: AnimeSortField? = null,
-    val sortDirection: SortDirection? = null,
 
     val statusIn: Set<AnimeStatus> = emptySet(),
     val formatIn: Set<AnimeFormat> = emptySet(),

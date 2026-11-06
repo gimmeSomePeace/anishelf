@@ -14,7 +14,8 @@ interface AnimeRepository {
 
     suspend fun searchAnime(
         request: PageRequest,
-        filters: AnimeFilters,
+        filters: AnimeFilters?,
+        sorting: AnimeSorting?,
     ): Page<Anime>
 
     suspend fun getAvailableGenres(): List<Genre>
