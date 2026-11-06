@@ -4,6 +4,6 @@ import me.gimmesomepeace.anishelf.app.domain.common.ImageUri
 import me.gimmesomepeace.anishelf.app.domain.common.VideoUri
 
 data class Trailer(
-    val videoUri: VideoUri?,
-    val thumbnail: ImageUri?
+    val videoUri: VideoUri? = null,
+    val thumbnail: ImageUri? = null,
 )
