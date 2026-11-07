@@ -11,6 +11,7 @@ composeBom = "2026.09.00"
 timber = "5.0.1"
 composeNavigation = "2.10.2"
 apollo = "5.2.0"
+kotlinSerialization = "2.4.21"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,3 +37,4 @@ apollo-runtime = { module = "com.apollographql.apollo:apollo-runtime", version.r
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 apollo = { id = "com.apollographql.apollo", version.ref = "apollo" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization" }

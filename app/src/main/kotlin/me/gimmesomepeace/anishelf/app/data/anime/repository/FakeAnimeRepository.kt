@@ -8,6 +8,7 @@ import me.gimmesomepeace.anishelf.app.domain.anime.model.PosterImages
 import me.gimmesomepeace.anishelf.app.domain.anime.model.Trailer
 import me.gimmesomepeace.anishelf.app.domain.anime.repository.AnimeFilters
 import me.gimmesomepeace.anishelf.app.domain.anime.repository.AnimeRepository
+import me.gimmesomepeace.anishelf.app.domain.anime.repository.AnimeSorting
 import me.gimmesomepeace.anishelf.app.domain.common.Page
 import me.gimmesomepeace.anishelf.app.domain.common.PageRequest
 import java.util.concurrent.ConcurrentHashMap
@@ -40,7 +41,8 @@ class FakeAnimeRepository : AnimeRepository {
 
     override suspend fun searchAnime(
         request: PageRequest,
-        filters: AnimeFilters,
+        filters: AnimeFilters?,
+        sorting: AnimeSorting?
     ): Page<Anime> {
         val responseItems = items.values.drop((request.pageNumber - 1) * request.limit).take(request.limit + 1)
         return Page(

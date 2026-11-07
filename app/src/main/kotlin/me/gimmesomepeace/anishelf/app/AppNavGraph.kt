@@ -16,7 +16,7 @@ object Routes {
 
     @Serializable
     data class AnimeDetails(
-        val id: AnimeId,
+        val animeId: Int,
     )
 }
 
@@ -29,7 +29,7 @@ fun AppNavGraph() {
             AnimeListRoute(
                 onAnimeClick = { animeId ->
                     if (FeatureFlags.ANIME_DETAILS_ENABLED) {
-                        controller.navigate(Routes.AnimeDetails(animeId))
+                        controller.navigate(Routes.AnimeDetails(animeId.value))
                     }
                 },
             )
