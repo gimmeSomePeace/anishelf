@@ -6,7 +6,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import kotlinx.serialization.Serializable
 import me.gimmesomepeace.anishelf.app.config.FeatureFlags
-import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeId
 import me.gimmesomepeace.anishelf.app.feature.details.AnimeDetailsRoute
 import me.gimmesomepeace.anishelf.app.feature.list.AnimeListRoute
 
