@@ -7,7 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import kotlinx.serialization.Serializable
 import me.gimmesomepeace.anishelf.app.config.FeatureFlags
 import me.gimmesomepeace.anishelf.app.feature.details.AnimeDetailsRoute
-import me.gimmesomepeace.anishelf.app.feature.list.AnimeListRoute
+import me.gimmesomepeace.anishelf.app.feature.search.list.AnimeListRoute
 
 object Routes {
     @Serializable

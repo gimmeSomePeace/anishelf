@@ -1,4 +1,4 @@
-package me.gimmesomepeace.anishelf.app.feature.list
+package me.gimmesomepeace.anishelf.app.feature.search.list
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

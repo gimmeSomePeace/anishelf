@@ -1,4 +1,4 @@
-package me.gimmesomepeace.anishelf.app.feature.list
+package me.gimmesomepeace.anishelf.app.feature.search.list
 
 import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeFormat
 import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeStatus

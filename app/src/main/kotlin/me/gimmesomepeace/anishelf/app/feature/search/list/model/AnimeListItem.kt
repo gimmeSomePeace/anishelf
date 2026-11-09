@@ -1,4 +1,4 @@
-package me.gimmesomepeace.anishelf.app.feature.list.model
+package me.gimmesomepeace.anishelf.app.feature.search.list.model
 
 import me.gimmesomepeace.anishelf.app.domain.anime.model.AnimeId
 import me.gimmesomepeace.anishelf.app.domain.common.ImageUri
