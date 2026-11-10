@@ -15,5 +15,6 @@ fun AnimeListRoute(
     AnimeListScreen(
         state = uiState,
         onAnimeClick = onAnimeClick,
+        onAction = viewModel::onAction,
     )
 }

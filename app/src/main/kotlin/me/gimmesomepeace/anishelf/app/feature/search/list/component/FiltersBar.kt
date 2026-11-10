@@ -17,7 +17,6 @@ fun FiltersBar(
     state: AnimeListState,
     onAction: (AnimeListAction) -> Unit,
     onFiltersButtonClicked: () -> Unit,
-    onSortingButtonClicked: () -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
         SearchBar(
@@ -32,7 +31,8 @@ fun FiltersBar(
                 )
             }
 
-            Button(onClick = onSortingButtonClicked) {
+            // TODO: insert some pop up
+            Button(onClick = {  }) {
                 Icon(
                     painter = painterResource(R.drawable.sort),
                     contentDescription = "Сортировка",
