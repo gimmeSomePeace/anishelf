@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import kotlinx.serialization.Serializable
 import me.gimmesomepeace.anishelf.app.config.FeatureFlags
 import me.gimmesomepeace.anishelf.app.feature.details.AnimeDetailsRoute
+import me.gimmesomepeace.anishelf.app.feature.search.filters.AnimeFiltersRoute
 import me.gimmesomepeace.anishelf.app.feature.search.list.AnimeListRoute
 
 object Routes {
@@ -17,6 +18,9 @@ object Routes {
     data class AnimeDetails(
         val animeId: Int,
     )
+
+    @Serializable
+    data object AnimeFilters
 }
 
 @Composable
@@ -31,11 +35,20 @@ fun AppNavGraph() {
                         controller.navigate(Routes.AnimeDetails(animeId.value))
                     }
                 },
+                onGoToFilters = {
+                    if (FeatureFlags.ANIME_FILTERS_ENABLED) {
+                        controller.navigate(Routes.AnimeFilters)
+                    }
+                },
             )
         }
 
         composable<Routes.AnimeDetails> {
             AnimeDetailsRoute()
+        }
+
+        composable<Routes.AnimeFilters> {
+            AnimeFiltersRoute()
         }
     }
 }

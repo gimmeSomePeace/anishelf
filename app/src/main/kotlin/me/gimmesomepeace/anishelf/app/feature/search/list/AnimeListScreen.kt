@@ -23,7 +23,7 @@ fun AnimeListScreen(
             )
         }
 
-        items(state.items, key = { it.id }, contentType = { it::class }) { anime ->
+        items(state.items, key = { it.id.value }, contentType = { it::class }) { anime ->
             AnimeCard(anime, onAnimeClick)
         }
     }

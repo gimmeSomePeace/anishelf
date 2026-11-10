@@ -3,8 +3,8 @@ package me.gimmesomepeace.anishelf.app.feature.search.list.component
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -24,20 +24,20 @@ fun FiltersBar(
             onSearchChanged = { onAction(AnimeListAction.QueryChangedAction(it)) },
         )
         Row(modifier = Modifier.fillMaxWidth()) {
-            Button(onClick = onFiltersButtonClicked) {
+            IconButton(onFiltersButtonClicked) {
                 Icon(
                     painter = painterResource(R.drawable.filters),
                     contentDescription = "Фильтры",
                 )
             }
-
             // TODO: insert some pop up
-            Button(onClick = {  }) {
+            IconButton(onClick = { }) {
                 Icon(
                     painter = painterResource(R.drawable.sort),
                     contentDescription = "Сортировка",
                 )
             }
         }
+        ChipsBar(state.appliedFilters, onAction)
     }
 }
