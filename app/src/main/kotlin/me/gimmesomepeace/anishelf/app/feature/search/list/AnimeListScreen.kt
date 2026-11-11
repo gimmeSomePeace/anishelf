@@ -17,7 +17,8 @@ fun AnimeListScreen(
     LazyColumn {
         item(key = "filters_bar", contentType = { "filters_bar" }) {
             FiltersBar(
-                state = state,
+                appliedFilters = state.appliedFilters,
+                appliedSorting = state.appliedSorting,
                 onAction = onAction,
                 onFiltersButtonClicked = onGoToFilters,
             )
