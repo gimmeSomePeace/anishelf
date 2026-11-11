@@ -137,7 +137,7 @@ class AnimeListViewModel
                     _state.update {
                         it.copy(
                             appliedFilters = it.appliedFilters.copy(
-                                query = action.newQuery,
+                                query = action.newQuery.ifBlank { null },
                             ),
                         )
                     }

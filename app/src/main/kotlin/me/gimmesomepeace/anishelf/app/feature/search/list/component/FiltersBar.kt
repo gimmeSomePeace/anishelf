@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,10 +41,7 @@ fun FiltersBar(
                     painter = painterResource(R.drawable.filters),
                     contentDescription = null,
                 )
-                Text(
-                    text = stringResource(R.string.feature_search_list_filters_button),
-                    style = MaterialTheme.typography.labelLarge,
-                )
+                Text(text = stringResource(R.string.feature_search_list_filters_button))
             }
             // TODO: insert some pop up
             OutlinedButton(onClick = { }, modifier = Modifier.weight(1f)) {
@@ -53,10 +49,7 @@ fun FiltersBar(
                     painter = painterResource(R.drawable.sort),
                     contentDescription = null,
                 )
-                Text(
-                    text = stringResource(R.string.feature_search_list_sorting_button),
-                    style = MaterialTheme.typography.labelLarge,
-                )
+                Text(text = stringResource(R.string.feature_search_list_sorting_button))
             }
         }
         ChipsBar(appliedFilters, onAction)
