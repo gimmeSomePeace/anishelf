@@ -5,11 +5,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import me.gimmesomepeace.anishelf.R
@@ -40,7 +42,10 @@ fun FiltersBar(
                     painter = painterResource(R.drawable.filters),
                     contentDescription = null,
                 )
-                Text("Фильтры")
+                Text(
+                    text = stringResource(R.string.feature_search_list_filters_button),
+                    style = MaterialTheme.typography.labelLarge,
+                )
             }
             // TODO: insert some pop up
             OutlinedButton(onClick = { }, modifier = Modifier.weight(1f)) {
@@ -48,7 +53,10 @@ fun FiltersBar(
                     painter = painterResource(R.drawable.sort),
                     contentDescription = null,
                 )
-                Text("Сортировка")
+                Text(
+                    text = stringResource(R.string.feature_search_list_sorting_button),
+                    style = MaterialTheme.typography.labelLarge,
+                )
             }
         }
         ChipsBar(appliedFilters, onAction)
